@@ -10,7 +10,8 @@ scrape_configs:
       insecure_skip_verify: true
     consul_sd_configs:
       - server: 'consul-server:8501'
-        datacenter: 'https'
+        scheme: 'https'
+        datacenter: 'lamassu-dc'
         tls_config:
           ca_file: '/etc/prometheus/certs/consul-server.crt'
         services:
